@@ -1,18 +1,20 @@
 // Importar express
-import express from "express";
+import express, { Request, Response } from "express";
 // Importar base de datos
 import databaseConnection from "./models/database";
+import diceRoutes from "./routes/diceRoutes";
 
 // Crear una instancia app de express
 const app = express();
 
+// Para leer las solicitudes JSON
+app.use(express.json());
+
+// Montar las rutas de los dados en la ruta base '/api'
+app.use("/api", diceRoutes);
+
 // Definir puerto
 const PORT = process.env.PORT || 21017;
-
-// Definir ruta de prueba
-app.get("/", () => {
-  console.log("Server working correctly");
-});
 
 // Iniciar conexión a la base de datos
 databaseConnection.connect((err) => {
