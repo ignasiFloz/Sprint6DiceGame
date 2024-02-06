@@ -1,5 +1,5 @@
 // Importar express
-import express, { Request, Response } from "express";
+import express from "express";
 // Importar base de datos
 import databaseConnection from "./models/database";
 import diceRoutes from "./routes/diceRoutes";

@@ -4,7 +4,7 @@ import mysql from 'mysql2';
 
 // Configurar conexión a base de datos
 const connection = mysql.createConnection({
-  host: 'sqlDB',
+  host: 'localhost',
   user: 'sprint6',
   password: '1234',
   database: 'dicedb'

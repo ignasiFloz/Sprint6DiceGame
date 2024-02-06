@@ -1,0 +1,1 @@
+mysql -u sprint6 -p -h localhost dicedb
